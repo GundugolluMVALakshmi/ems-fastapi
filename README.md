@@ -1,21 +1,3 @@
-Monaaaaa 🔥💥💥
-**CONGRATULATIONS!**
-Your project is officially LIVE on GitHub 🎉🎉🎉
-Repo perfect ga upload ayindi.
-
----
-
-## ⭐ Next Step (MOST IMPORTANT)
-
-👉 **README.md add cheyyali** (Idi recruiters chustaru.
-Idhi lekunte project incomplete ani anipistundi.)
-
-Nenu ready ga README.md istunna…
-Nuvvu GitHub lo **“Add a README”** click chesi copy–paste cheyyi.
-Ready? Ikkada:
-
----
-
 # 📌 Employee Management System (EMS) – FastAPI CRUD Project
 
 A simple and clean **Employee Management System** built using **FastAPI**, **SQLite**, and **SQLAlchemy**.
