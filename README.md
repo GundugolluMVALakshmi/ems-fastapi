@@ -1,4 +1,4 @@
-# 📌 StaffTrack-API - Employee Management System (EMS) – FastAPI CRUD Project
+# StaffTrack-API: FastAPI-based Employee Management System (CRUD + SQLite)
 
 A simple and clean Employee Management System built using **FastAPI**, **SQLite**, and **SQLAlchemy**.  
 This project implements full **CRUD operations** (Create, Read, Update, Delete) for managing employee data.
@@ -73,9 +73,9 @@ uvicorn main:app --reload
 
 ## 📘 Swagger Documentation
 
-FastAPI automatically generates UI documentation:
+Click below to view the interactive API:
 
-👉 http://127.0.0.1:8000/docs
+👉 [**Open Swagger UI**](http://127.0.0.1:8000/docs)
 
 ---
 
