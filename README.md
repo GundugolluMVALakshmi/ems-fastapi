@@ -1,4 +1,4 @@
-# 📌 Employee Management System (EMS) – FastAPI CRUD Project
+# 📌 StaffTrack-API - Employee Management System (EMS) – FastAPI CRUD Project
 
 A simple and clean Employee Management System built using **FastAPI**, **SQLite**, and **SQLAlchemy**.  
 This project implements full **CRUD operations** (Create, Read, Update, Delete) for managing employee data.
