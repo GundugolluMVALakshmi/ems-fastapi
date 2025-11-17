@@ -64,7 +64,12 @@ class EmployeeOut(BaseModel):
 # FASTAPI APP
 # -------------------
 
-app = FastAPI(title="Employee Management System (EMS)")
+app = FastAPI(
+    title="StaffTrack API",
+    description="StaffTrack - Employee Management System built using FastAPI, SQLite, and SQLAlchemy",
+    version="1.0.0"
+)
+
 
 
 def get_db():
@@ -76,7 +81,7 @@ def get_db():
 
 
 # CREATE EMPLOYEE
-@app.post("/employees", response_model=EmployeeOut)
+@app.post("/employees", response_model=EmployeeOut, tags=["Employees"])
 def create_employee(emp: EmployeeCreate):
     db: Session = next(get_db())
 
@@ -97,14 +102,14 @@ def create_employee(emp: EmployeeCreate):
 
 
 # GET ALL EMPLOYEES
-@app.get("/employees", response_model=List[EmployeeOut])
+@app.get("/employees", response_model=List[EmployeeOut], tags=["Employees"])
 def get_employees():
     db: Session = next(get_db())
     return db.query(EmployeeDB).all()
 
 
 # GET EMPLOYEE BY ID
-@app.get("/employees/{emp_id}", response_model=EmployeeOut)
+@app.get("/employees/{emp_id}", response_model=EmployeeOut, tags=["Employees"])
 def get_employee(emp_id: int):
     db: Session = next(get_db())
     emp = db.query(EmployeeDB).filter(EmployeeDB.id == emp_id).first()
@@ -116,7 +121,7 @@ def get_employee(emp_id: int):
 
 
 # UPDATE EMPLOYEE
-@app.put("/employees/{emp_id}", response_model=EmployeeOut)
+@app.put("/employees/{emp_id}", response_model=EmployeeOut, tags=["Employees"])
 def update_employee(emp_id: int, data: EmployeeUpdate):
     db: Session = next(get_db())
     emp = db.query(EmployeeDB).filter(EmployeeDB.id == emp_id).first()
@@ -134,7 +139,7 @@ def update_employee(emp_id: int, data: EmployeeUpdate):
 
 
 # DELETE EMPLOYEE
-@app.delete("/employees/{emp_id}")
+@app.delete("/employees/{emp_id}", tags=["Employees"])
 def delete_employee(emp_id: int):
     db: Session = next(get_db())
     emp = db.query(EmployeeDB).filter(EmployeeDB.id == emp_id).first()
@@ -145,3 +150,4 @@ def delete_employee(emp_id: int):
     db.delete(emp)
     db.commit()
     return {"message": "Employee deleted successfully"}
+
