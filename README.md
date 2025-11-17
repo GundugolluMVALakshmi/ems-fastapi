@@ -1,4 +1,4 @@
-# StaffTrack-API: FastAPI-based Employee Management System (CRUD + SQLite)
+## ⚙️ StaffTrack-API: FastAPI-based Employee Management System (CRUD + SQLite)
 
 A simple and clean Employee Management System built using **FastAPI**, **SQLite**, and **SQLAlchemy**.  
 This project implements full **CRUD operations** (Create, Read, Update, Delete) for managing employee data.
